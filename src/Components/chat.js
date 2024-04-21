@@ -18,7 +18,7 @@ function Chatbot() {
     if (inputValue.trim() !== '') {
       try {
         // Send user's message to backend and get bot's response
-        const response = await axios.post('http://127.0.0.1:5000/api/chatbot', { message: inputValue });
+        const response = await axios.post('https://chatbot-zpqu.onrender.com', { message: inputValue });
   
         // Update messages state to append user's input message at the top
         setMessages(prevState => [{ text: inputValue, sender: 'user' }, ...prevState]);
